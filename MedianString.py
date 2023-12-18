@@ -25,7 +25,6 @@ def distance_between_pattern_and_strings(pattern, dna_list):
 def median_string(dna_list, k):
     distance = float('inf')
     patterns = all_strings(k)
-    print(patterns)
     median = ""
     for pattern in patterns:
         curr_distance = distance_between_pattern_and_strings(pattern, dna_list)
@@ -43,15 +42,4 @@ def all_strings(k):
     pattern = 'A' * k
     return generate_neighbors(pattern, k)
 
-dna_list = ["GAGGCGGAGGCACTTACCTGCGGTGCCACGTGGCATCTGTCG","ACGCACGGAGAGCTCAAGGTTGGTCAACGACTGCCGTCGATG",
-            "GCAGGACTGTCGTTGACTGGGTAACCCCCGCCTCGGCGATGT",
-"TCTGCATGCCCTCTGACGCAATCATGAAGTGCTTCAAGTCTT",
-"AGAAGGTTACAACGCCGGGTCCTTCTCGCGAGATTACTGACG",
-"CACCTTGAGTGACTGGCGGGTTGTGTTGCTTGCAAACGTTCT",
-"CTGACGGTCTGGAAACTAGTACTTGTTTCGTAATTCAGACAA",
-            "GAGCAGAAAGCCACCTATCCATTACGAGTCCTGGCGGCGCGC",
-"CTGAATACAACCTGCCGGCTGGCGCGACCTCAAAGTGTTGGA",
-"CTGCCGGCGGAGGACAGTCCCGTACCATTCGGAAATACTAGA"]
-#dna_list = dna_list.split()
-print(dna_list)
-print(median_string(dna_list, 6))
+

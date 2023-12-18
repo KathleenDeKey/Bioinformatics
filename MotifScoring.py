@@ -8,7 +8,6 @@ def score(motifs):
     for col in range(len(motifs[0])):
         for nucleotide in 'ATCG':
             counts[nucleotide].append(occurrence(motifs, nucleotide, col))
-    print(counts)
     total_entropy = 0
     for i in range(len(motifs[0])):
         entropy = 0
@@ -23,16 +22,10 @@ def score(motifs):
 
 # Calculate the occurrence of a nucleotide in the specific position
 def occurrence(motifs, nucleotide, col):
-    count = 0
+    occurrence = 0
     for row in motifs:
         curr_nucleo = row[col]
         if curr_nucleo.upper() == nucleotide:
-            count += 1
-    occurrence = count / len(motifs)
-    # print(occurrence)
+            occurrence += 1
     return occurrence
 
-
-motifs = ["TCGGGGGTTTTT", "CCGGTGACTTAC", "ACGGGGATTTTC", "TTGGGGACTTTT", "AAGGGGACTTCC", "TTGGGGACTTCC",
-          "TCGGGGATTCAT", "TCGGGGATTCCT", "TAGGGGAACTAC", "TCGGGTATAACC"]
-print(score(motifs))

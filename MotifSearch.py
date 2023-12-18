@@ -47,8 +47,3 @@ def is_motif_in_Dna(k_mer, Dna_list, d):
     return True
 
 
-Dna_list = {"GTACGGTGGTTGCGTCTGGGGAAAG", "GAAAGCTTGCCTTCGTTTCCAGACT", "TTACAGAAAGGTATCGTCAAACTAC",
-            "CGTTTGCTGGCGGCGGCATGCGGAA", "GCACGACAGTTTCTTCGCGTTTAGG", "ATCGGGAAAGGGTGGGGATCTCAGA"}
-result = motif_enumeration(Dna_list, 5, 2)
-# for k_mer in result:
-# print(k_mer, end=' ')
