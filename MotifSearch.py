@@ -12,6 +12,7 @@ def motif_enumeration(Dna_list, k, d):
                     patterns.add(neighbor)
         return patterns
 
+
 # Finds all k_mers that differ from 'pattern' by at most 'd' mismatches
 def generate_neighbors(pattern, d):
     if d == 0:
@@ -28,9 +29,11 @@ def generate_neighbors(pattern, d):
             neighbors.add(pattern[0] + neighbor)
     return neighbors
 
+
 # Calculate the hamming distance between two sequences of equal length
 def hamming_distance(seq1, seq2):
     return sum(c1 != c2 for c1, c2 in zip(seq1, seq2))
+
 
 # Find if a pattern appears in all Dna strings with at most d mismatches
 def is_motif_in_Dna(k_mer, Dna_list, d):

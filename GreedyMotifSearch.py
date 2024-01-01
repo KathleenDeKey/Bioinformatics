@@ -2,7 +2,6 @@
 # Input: A string Text, an integer k, and a 4 × k matrix Profile.
 # Profile sequence: ACGT
 # Output: A Profile-most probable k-mer in Text.
-
 def profile_most_probably_kmer(Dna, k, profile: dict):
     highest_probability = 0
     most_probable_kmer = Dna[:k]
@@ -50,4 +49,3 @@ def create_profile(motifs):
         for nucleotide in 'ACGT':
             profile[nucleotide][col] = profile[nucleotide][col] / nucleotide_count
     return profile
-

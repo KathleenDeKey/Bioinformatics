@@ -4,8 +4,6 @@
 # Input: A string Pattern followed by a collection of space-separated strings Dna.
 # Output: d(Pattern, Dna)
 from MotifSearch import hamming_distance
-
-
 def distance_between_pattern_and_strings(pattern, dna_list):
     k = len(pattern)
     distance = 0
@@ -36,8 +34,6 @@ def median_string(dna_list, k):
 
 # Returns an array containing all strings of length k.
 from MotifSearch import generate_neighbors
-
-
 def all_strings(k):
     pattern = 'A' * k
     return generate_neighbors(pattern, k)
